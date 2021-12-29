@@ -2,7 +2,7 @@ console.log('in client.js');
 
 $(document).ready(onReady);
 
-let divCount = 0;
+let divCount = 1;
 
 function onReady() {
     console.log('so freakin\' ready 🤘');
@@ -39,5 +39,8 @@ function mellowYellow() {
 
 function divDestroyer() {
     console.log('delete button clicked');
+
+    $(this).closest('.newDivs').remove();
     
+    divCount--;
 }
