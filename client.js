@@ -8,6 +8,8 @@ function onReady() {
     console.log('so freakin\' ready 🤘');
     
     $('#generateBtn').on('click', divGenerator);
+    $(document).on('click', '.yellowBtn', mellowYellow);
+    $(document).on('click', '.deleteBtn', divDestroyer);
 }
 
 
@@ -24,6 +26,18 @@ function divGenerator() {
     divCount++;
 
     console.log(divCount);
-    
+}
+
+
+function mellowYellow() {
+    console.log('yellow button clicked');
+
+    $(this).closest('.newDivs').css('background-color', 'yellow');
+    $(this).closest('.newDivs').css('color', 'black');
+}
+
+
+function divDestroyer() {
+    console.log('delete button clicked');
     
 }
