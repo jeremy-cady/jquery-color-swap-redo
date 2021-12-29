@@ -17,8 +17,8 @@ function divGenerator() {
     $('#displayDivs').append(`
         <div class="newDivs">
             <p>Div Count: ${divCount}</p>
-            <button class="yellowBtn>Yellow</button>
-            <button></button>
+            <button class="yellowBtn">Yellow</button>
+            <button class="deleteBtn">Delete</button>
         </div>`);
 
     divCount++;
