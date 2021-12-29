@@ -10,6 +10,7 @@ function onReady() {
     $('#generateBtn').on('click', divGenerator);
     $(document).on('click', '.yellowBtn', mellowYellow);
     $(document).on('click', '.deleteBtn', divDestroyer);
+    $(document).on('click', '.backToRed', backToRed);
 }
 
 
@@ -21,6 +22,7 @@ function divGenerator() {
             <p>Div Count: ${divCount}</p>
             <button class="yellowBtn">Yellow</button>
             <button class="deleteBtn">Delete</button>
+            <button class="backToRed">Red</button>
         </div>`);
 
     divCount++;
@@ -43,4 +45,11 @@ function divDestroyer() {
     $(this).closest('.newDivs').remove();
     
     divCount--;
+}
+
+
+function backToRed() {
+    console.log('red button clicked');
+    
+    $(this).closest('.newDivs').css('background-color', 'red');
 }
