@@ -13,5 +13,17 @@ function onReady() {
 
 function divGenerator() {
     console.log('generate button clicked');
+
+    $('#displayDivs').append(`
+        <div class="newDivs">
+            <p>Div Count: ${divCount}</p>
+            <button class="yellowBtn>Yellow</button>
+            <button></button>
+        </div>`);
+
+    divCount++;
+
+    console.log(divCount);
+    
     
 }
